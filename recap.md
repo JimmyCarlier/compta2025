@@ -1,5 +1,14 @@
 mvn spring-boot:run
 
+
+Java	Langage principal de l’application
+Spring Boot	Framework backend pour structurer l’application
+Spring Web (MVC)	Gestion des requêtes HTTP et des endpoints REST
+Thymeleaf	Moteur de template pour afficher des pages HTML dynamiques
+MySQL	Base de données pour stocker les données
+Spring Data JPA (ORM)	Interface simplifiée pour interagir avec la BDD
+Maven	Gestionnaire de projet et des dépendances
+WAMP	Fournit MySQL pour stocker les données en local
 1. Création du projet Spring Boot
 
 Structure de base : Nous avons utilisé Spring Boot pour créer un projet Java, ce qui t’a permis d'utiliser le framework Spring et d'avoir un serveur intégré avec Tomcat.
