@@ -1,3 +1,5 @@
+mvn spring-boot:run
+
 1. Création du projet Spring Boot
 
 Structure de base : Nous avons utilisé Spring Boot pour créer un projet Java, ce qui t’a permis d'utiliser le framework Spring et d'avoir un serveur intégré avec Tomcat.
