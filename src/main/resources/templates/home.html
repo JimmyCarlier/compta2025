@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Accueil</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/home.css}" />
+  </head>
+  <body>
+    <h1 th:text="${title}"></h1>
+    <button id="addButton">Créer un plan de compte</button>
+    <form action="/addCompta" id="formAdd">
+      <label for="monthPicker">Choisir un mois et une année :</label>
+      <input type="text" id="monthPicker" />
+      <label for="oldSolde">Ancien solde</label>
+      <input type="number" required name="price" min="0" value="0" step=".01" />
+      <input type="submit" value="Créé le plan" />
+    </form>
+  </body>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+  <script type="module" src="js/addCpt.js"></script>
+</html>

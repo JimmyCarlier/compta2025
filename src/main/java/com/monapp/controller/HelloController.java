@@ -1,13 +1,20 @@
 package com.monapp.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import java.time.Year;
 
-@RestController
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+// Permet d'indiquet que l'on fournis un template
+@Controller
 public class HelloController {
 
+    // Le chemin du controller
     @GetMapping("/")
-    public String hello() {
-        return "Hello, Spring Boot!";
+    public String hello(Model model) {
+        int year = Year.now().getValue();
+        model.addAttribute("title", "Comptabilité " + year);
+        return "home"; // Affiche home.html
     }
 }
