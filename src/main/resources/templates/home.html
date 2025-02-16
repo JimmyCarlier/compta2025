@@ -6,7 +6,26 @@
   </head>
   <body>
     <h1 th:text="${title}"></h1>
+
+    <!-- Affichage des informations du plan comptable après soumission du formulaire -->
+    <div th:if="${plan != null}">
+      <p>Plan comptable récemment ajouté :</p>
+      <p>Nom : <span th:text="${plan.nom}"></span></p>
+      <p>Mois : <span th:text="${mois}"></span></p>
+      <p>Année : <span th:text="${plan.annee}"></span></p>
+      <p>Solde initial : <span th:text="${plan.oldSolde}"></span></p>
+    </div>
+    <br />
+    <div th:each="plan : ${planList}">
+      <p>Nom : <span th:text="${plan.nom}"></span></p>
+      <p>Mois : <span th:text="${plan.mois}"></span></p>
+      <p>Année : <span th:text="${plan.annee}"></span></p>
+      <p>Solde initial : <span th:text="${plan.oldSolde}"></span></p>
+      <hr />
+    </div>
+
     <button id="addButton">Créer un plan de compte</button>
+
     <form action="/addCompta" id="formAdd" method="POST">
       <label for="nom">Nom :</label>
       <input type="text" id="nom" name="nom" required />
@@ -36,6 +55,5 @@
     href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
   />
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-
   <script type="module" src="js/addCpt.js"></script>
 </html>

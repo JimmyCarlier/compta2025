@@ -4,12 +4,21 @@ import java.math.BigDecimal;
 
 public class PlanComptable {
 
+    private long id;
     private String nom;
     private String mois;
     private int annee;
     private BigDecimal oldSolde;
 
     // Getters et setters
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
     public String getNom() {
         return nom;
     }
@@ -51,5 +60,4 @@ public class PlanComptable {
                 ", oldSolde=" + oldSolde +
                 '}';
     }
-
 }
