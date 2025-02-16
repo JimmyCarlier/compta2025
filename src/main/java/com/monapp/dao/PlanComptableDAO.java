@@ -18,7 +18,8 @@ public class PlanComptableDAO {
 
     // Méthode pour insérer un plan comptable dans la base de données
     public void save(PlanComptable planComptable) {
-        String sql = "INSERT INTO plan_comptable (nom, mois) VALUES (?, ?)";
-        jdbcTemplate.update(sql, planComptable.getNom(), planComptable.getMois());
+        String sql = "INSERT INTO plan_comptable (nom, mois,annee,oldSolde) VALUES (?, ?, ?, ?)";
+        jdbcTemplate.update(sql, planComptable.getNom(), planComptable.getMois(), planComptable.getAnnee(),
+                planComptable.getOldSolde());
     }
 }

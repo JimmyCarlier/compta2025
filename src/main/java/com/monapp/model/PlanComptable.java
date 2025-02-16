@@ -41,4 +41,15 @@ public class PlanComptable {
     public void setOldSolde(BigDecimal oldSolde) {
         this.oldSolde = oldSolde;
     }
+
+    @Override
+    public String toString() {
+        return "PlanComptable{" +
+                "nom='" + nom + '\'' +
+                ", mois='" + mois + '\'' +
+                ", annee=" + annee +
+                ", oldSolde=" + oldSolde +
+                '}';
+    }
+
 }

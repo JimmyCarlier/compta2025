@@ -7,12 +7,28 @@
   <body>
     <h1 th:text="${title}"></h1>
     <button id="addButton">Créer un plan de compte</button>
-    <form action="/addCompta" id="formAdd">
+    <form action="/addCompta" id="formAdd" method="POST">
+      <label for="nom">Nom :</label>
+      <input type="text" id="nom" name="nom" required />
+
       <label for="monthPicker">Choisir un mois et une année :</label>
-      <input type="text" id="monthPicker" />
-      <label for="oldSolde">Ancien solde</label>
-      <input type="number" required name="price" min="0" value="0" step=".01" />
-      <input type="submit" value="Créé le plan" />
+      <input type="text" id="monthPicker" required />
+
+      <!-- Champs cachés pour mois et année -->
+      <input type="hidden" id="mois" name="mois" />
+      <input type="hidden" id="annee" name="annee" />
+
+      <label for="oldSolde">Ancien solde :</label>
+      <input
+        type="number"
+        name="oldSolde"
+        min="0"
+        value="0"
+        step=".01"
+        required
+      />
+
+      <button type="submit">Créer le plan</button>
     </form>
   </body>
   <link
